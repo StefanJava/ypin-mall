@@ -16,6 +16,9 @@
         <module>ypin-order</module>
         <module>ypin-product</module>
         <module>ypin-ware</module>
+        <module>renren-fast</module>
+        <module>renren-generator</module>
+        <module>ypin-common</module>
     </modules>
 
 </project>

@@ -1,9 +1,11 @@
 package com.stefan.ypinmall.order;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
+@MapperScan("com.stefan.ypinmall.order.dao")
 public class YpinOrderApplication {
 
 	public static void main(String[] args) {
