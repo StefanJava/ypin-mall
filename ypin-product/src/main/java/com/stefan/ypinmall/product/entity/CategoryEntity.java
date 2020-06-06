@@ -1,15 +1,16 @@
 package com.stefan.ypinmall.product.entity;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import lombok.Data;
 
 import java.io.Serializable;
-import java.util.Date;
-import lombok.Data;
+import java.util.List;
 
 /**
  * 商品三级分类
- * 
+ *
  * @author Stefan_Yang
  * @email stefanyang520@gmail.com
  * @date 2020-05-31 22:51:52
@@ -56,5 +57,11 @@ public class CategoryEntity implements Serializable {
 	 * 商品数量
 	 */
 	private Integer productCount;
+
+	/**
+	 * 子分类
+	 */
+	@TableField(exist = false)
+	private List<CategoryEntity> childrenCategoryList;
 
 }
