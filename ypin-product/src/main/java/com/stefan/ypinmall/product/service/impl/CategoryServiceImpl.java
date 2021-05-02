@@ -27,7 +27,7 @@ public class CategoryServiceImpl extends ServiceImpl<CategoryDao, CategoryEntity
     public PageUtils queryPage(Map<String, Object> params) {
         IPage<CategoryEntity> page = this.page(
                 new Query<CategoryEntity>().getPage(params),
-                new QueryWrapper<CategoryEntity>()
+                new QueryWrapper<>()
         );
 
         return new PageUtils(page);
@@ -46,6 +46,11 @@ public class CategoryServiceImpl extends ServiceImpl<CategoryDao, CategoryEntity
                 .collect(Collectors.toList());
 
         return level1Category;
+    }
+
+    @Override
+    public void removeMenuByIds(List<Long> catIds) {
+        baseMapper.deleteBatchIds(catIds);
     }
 
     private List<CategoryEntity> getChildren(CategoryEntity root, List<CategoryEntity> allCategory) {

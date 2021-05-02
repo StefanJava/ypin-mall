@@ -6,7 +6,6 @@ import com.stefan.ypinmall.product.service.CategoryService;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
-import java.util.Arrays;
 import java.util.List;
 
 
@@ -27,7 +26,7 @@ public class CategoryController {
      * 查询所有分类及子分类，以树形结构封装起来
      */
     @GetMapping("/list/tree")
-    public R list( ){
+    public R list(){
         List<CategoryEntity> categoryEntityList = categoryService.listWithTree();
 
         return R.ok().put("data", categoryEntityList);
@@ -68,9 +67,9 @@ public class CategoryController {
      * 删除
      */
     @RequestMapping("/delete")
-    public R delete(@RequestBody Long[] catIds){
-		categoryService.removeByIds(Arrays.asList(catIds));
+    public R delete(@RequestBody List<Long> catIds){
 
+        categoryService.removeMenuByIds(catIds);
         return R.ok();
     }
 

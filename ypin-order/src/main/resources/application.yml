@@ -2,12 +2,12 @@ spring:
   datasource:
     username: root
     password: stefan
-    url: jdbc:mysql://192.168.56.10:3306/ypin_oms
+    url: jdbc:mysql://192.168.111.130:33306/ypin_oms
     driver-class-name: com.mysql.cj.jdbc.Driver
   cloud:
     nacos:
       discovery:
-        server-addr: 192.168.31.39:8848
+        server-addr: 127.0.0.1:8848
   application:
     name: ypin-order
 mybatis-plus:
