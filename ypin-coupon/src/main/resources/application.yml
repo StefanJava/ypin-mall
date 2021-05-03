@@ -2,12 +2,12 @@
 #  datasource:
 #    username: root
 #    password: stefan
-#    url: jdbc:mysql://192.168.227.128:33306/ypin_sms
+#    url: jdbc:mysql://192.168.111.130:33306/ypin_sms
 #    driver-class-name: com.mysql.cj.jdbc.Driver
 #  cloud:
 #    nacos:
 #      discovery:
-#        server-addr: localhost:8848
+#        server-addr: 127.0.0.1:8848
 #  application:
 #    name: ypin-coupon
 #mybatis-plus:

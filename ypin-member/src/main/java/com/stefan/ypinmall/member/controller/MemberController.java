@@ -29,6 +29,7 @@ public class MemberController {
 
     @Resource
     private CouponFeign couponFeign;
+
     @GetMapping("/coupons")
     public R test() {
         MemberEntity memberEntity = new MemberEntity();

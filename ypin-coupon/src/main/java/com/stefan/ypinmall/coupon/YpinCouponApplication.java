@@ -11,7 +11,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
  * 2、创建一个bootstrap.properties文件
  *  1）配置中心地址
  * 3、在nacos配置中心中创建模块名.properties文件
- * 4、@RefreshScope实时shuaxin
+ * 4、@RefreshScope实时刷新
  * 5、优先使用nacos配置中心的配置
  *
  * 6、细节
